@@ -7,15 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D3503E8C2911EA2C00B5E9CE /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3503E8B2911EA2C00B5E9CE /* KeychainManager.swift */; };
+		D3503E8F2911F68500B5E9CE /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3503E8E2911F68500B5E9CE /* UserDefaultsManager.swift */; };
+		D3503E912912312A00B5E9CE /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3503E902912312A00B5E9CE /* Constants.swift */; };
+		D3503E93291270AF00B5E9CE /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3503E92291270AF00B5E9CE /* Quote.swift */; };
 		D3692DA2291154D200A2F3A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3692DA1291154D200A2F3A1 /* AppDelegate.swift */; };
 		D3692DA4291154D200A2F3A1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3692DA3291154D200A2F3A1 /* SceneDelegate.swift */; };
-		D3692DA6291154D200A2F3A1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3692DA5291154D200A2F3A1 /* ViewController.swift */; };
-		D3692DA9291154D200A2F3A1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3692DA7291154D200A2F3A1 /* Main.storyboard */; };
 		D3692DAB291154D400A2F3A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3692DAA291154D400A2F3A1 /* Assets.xcassets */; };
 		D3692DAE291154D400A2F3A1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3692DAC291154D400A2F3A1 /* LaunchScreen.storyboard */; };
 		D3692DB9291154D400A2F3A1 /* SALT_MVVM_TESTTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3692DB8291154D400A2F3A1 /* SALT_MVVM_TESTTests.swift */; };
 		D3692DC3291154D400A2F3A1 /* SALT_MVVM_TESTUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3692DC2291154D400A2F3A1 /* SALT_MVVM_TESTUITests.swift */; };
 		D3692DC5291154D400A2F3A1 /* SALT_MVVM_TESTUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3692DC4291154D400A2F3A1 /* SALT_MVVM_TESTUITestsLaunchTests.swift */; };
+		D3692DD42911568E00A2F3A1 /* UserCredential.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3692DD32911568E00A2F3A1 /* UserCredential.swift */; };
+		D3692DD6291156BE00A2F3A1 /* ObservableObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3692DD5291156BD00A2F3A1 /* ObservableObject.swift */; };
+		D3692DD9291157A500A2F3A1 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3692DD7291157A500A2F3A1 /* LoginViewController.swift */; };
+		D3692DDA291157A500A2F3A1 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3692DD8291157A500A2F3A1 /* LoginViewController.xib */; };
+		D3692DDC291157C800A2F3A1 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3692DDB291157C800A2F3A1 /* LoginViewModel.swift */; };
+		D3692DE0291158AE00A2F3A1 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3692DDE291158AE00A2F3A1 /* HomeViewController.swift */; };
+		D3692DE1291158AE00A2F3A1 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3692DDF291158AE00A2F3A1 /* HomeViewController.xib */; };
+		D3692DE3291158BB00A2F3A1 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3692DE2291158BB00A2F3A1 /* HomeViewModel.swift */; };
+		D3692DE52911638700A2F3A1 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3692DE42911638700A2F3A1 /* NetworkService.swift */; };
+		D3692DE72911676F00A2F3A1 /* APIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3692DE62911676F00A2F3A1 /* APIResponse.swift */; };
+		D3692DEA2911687900A2F3A1 /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3692DE92911687900A2F3A1 /* Endpoints.swift */; };
+		D3692DEC291169AF00A2F3A1 /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3692DEB291169AF00A2F3A1 /* NetworkMonitor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,11 +50,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D3503E8B2911EA2C00B5E9CE /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
+		D3503E8E2911F68500B5E9CE /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
+		D3503E902912312A00B5E9CE /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		D3503E92291270AF00B5E9CE /* Quote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
 		D3692D9E291154D200A2F3A1 /* SALT-MVVM_TEST.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SALT-MVVM_TEST.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3692DA1291154D200A2F3A1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D3692DA3291154D200A2F3A1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D3692DA5291154D200A2F3A1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		D3692DA8291154D200A2F3A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D3692DAA291154D400A2F3A1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D3692DAD291154D400A2F3A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D3692DAF291154D400A2F3A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +65,18 @@
 		D3692DBE291154D400A2F3A1 /* SALT-MVVM_TESTUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SALT-MVVM_TESTUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3692DC2291154D400A2F3A1 /* SALT_MVVM_TESTUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SALT_MVVM_TESTUITests.swift; sourceTree = "<group>"; };
 		D3692DC4291154D400A2F3A1 /* SALT_MVVM_TESTUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SALT_MVVM_TESTUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D3692DD32911568E00A2F3A1 /* UserCredential.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCredential.swift; sourceTree = "<group>"; };
+		D3692DD5291156BD00A2F3A1 /* ObservableObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableObject.swift; sourceTree = "<group>"; };
+		D3692DD7291157A500A2F3A1 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		D3692DD8291157A500A2F3A1 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		D3692DDB291157C800A2F3A1 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		D3692DDE291158AE00A2F3A1 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		D3692DDF291158AE00A2F3A1 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		D3692DE2291158BB00A2F3A1 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		D3692DE42911638700A2F3A1 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		D3692DE62911676F00A2F3A1 /* APIResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResponse.swift; sourceTree = "<group>"; };
+		D3692DE92911687900A2F3A1 /* Endpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
+		D3692DEB291169AF00A2F3A1 /* NetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +104,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D3503E8D2911F66200B5E9CE /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				D3692DD5291156BD00A2F3A1 /* ObservableObject.swift */,
+				D3503E8B2911EA2C00B5E9CE /* KeychainManager.swift */,
+				D3503E8E2911F68500B5E9CE /* UserDefaultsManager.swift */,
+				D3503E902912312A00B5E9CE /* Constants.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		D3692D95291154D200A2F3A1 = {
 			isa = PBXGroup;
 			children = (
@@ -99,10 +138,13 @@
 		D3692DA0291154D200A2F3A1 /* SALT-MVVM_TEST */ = {
 			isa = PBXGroup;
 			children = (
-				D3692DA1291154D200A2F3A1 /* AppDelegate.swift */,
+				D3503E8D2911F66200B5E9CE /* Utils */,
+				D3692DE82911686300A2F3A1 /* Networking */,
+				D3692DDD2911588800A2F3A1 /* HomeView */,
+				D3692DD12911567400A2F3A1 /* LoginView */,
+				D3692DD22911567D00A2F3A1 /* Models */,
 				D3692DA3291154D200A2F3A1 /* SceneDelegate.swift */,
-				D3692DA5291154D200A2F3A1 /* ViewController.swift */,
-				D3692DA7291154D200A2F3A1 /* Main.storyboard */,
+				D3692DA1291154D200A2F3A1 /* AppDelegate.swift */,
 				D3692DAA291154D400A2F3A1 /* Assets.xcassets */,
 				D3692DAC291154D400A2F3A1 /* LaunchScreen.storyboard */,
 				D3692DAF291154D400A2F3A1 /* Info.plist */,
@@ -125,6 +167,46 @@
 				D3692DC4291154D400A2F3A1 /* SALT_MVVM_TESTUITestsLaunchTests.swift */,
 			);
 			path = "SALT-MVVM_TESTUITests";
+			sourceTree = "<group>";
+		};
+		D3692DD12911567400A2F3A1 /* LoginView */ = {
+			isa = PBXGroup;
+			children = (
+				D3692DD7291157A500A2F3A1 /* LoginViewController.swift */,
+				D3692DD8291157A500A2F3A1 /* LoginViewController.xib */,
+				D3692DDB291157C800A2F3A1 /* LoginViewModel.swift */,
+			);
+			path = LoginView;
+			sourceTree = "<group>";
+		};
+		D3692DD22911567D00A2F3A1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D3692DD32911568E00A2F3A1 /* UserCredential.swift */,
+				D3692DE62911676F00A2F3A1 /* APIResponse.swift */,
+				D3503E92291270AF00B5E9CE /* Quote.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D3692DDD2911588800A2F3A1 /* HomeView */ = {
+			isa = PBXGroup;
+			children = (
+				D3692DDE291158AE00A2F3A1 /* HomeViewController.swift */,
+				D3692DDF291158AE00A2F3A1 /* HomeViewController.xib */,
+				D3692DE2291158BB00A2F3A1 /* HomeViewModel.swift */,
+			);
+			path = HomeView;
+			sourceTree = "<group>";
+		};
+		D3692DE82911686300A2F3A1 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				D3692DE42911638700A2F3A1 /* NetworkService.swift */,
+				D3692DE92911687900A2F3A1 /* Endpoints.swift */,
+				D3692DEB291169AF00A2F3A1 /* NetworkMonitor.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,7 +315,8 @@
 			files = (
 				D3692DAE291154D400A2F3A1 /* LaunchScreen.storyboard in Resources */,
 				D3692DAB291154D400A2F3A1 /* Assets.xcassets in Resources */,
-				D3692DA9291154D200A2F3A1 /* Main.storyboard in Resources */,
+				D3692DDA291157A500A2F3A1 /* LoginViewController.xib in Resources */,
+				D3692DE1291158AE00A2F3A1 /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,9 +341,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D3692DA6291154D200A2F3A1 /* ViewController.swift in Sources */,
+				D3503E8C2911EA2C00B5E9CE /* KeychainManager.swift in Sources */,
+				D3692DE52911638700A2F3A1 /* NetworkService.swift in Sources */,
+				D3692DD9291157A500A2F3A1 /* LoginViewController.swift in Sources */,
+				D3692DE3291158BB00A2F3A1 /* HomeViewModel.swift in Sources */,
+				D3503E93291270AF00B5E9CE /* Quote.swift in Sources */,
+				D3692DD6291156BE00A2F3A1 /* ObservableObject.swift in Sources */,
+				D3503E912912312A00B5E9CE /* Constants.swift in Sources */,
+				D3692DD42911568E00A2F3A1 /* UserCredential.swift in Sources */,
+				D3692DE72911676F00A2F3A1 /* APIResponse.swift in Sources */,
+				D3692DE0291158AE00A2F3A1 /* HomeViewController.swift in Sources */,
 				D3692DA2291154D200A2F3A1 /* AppDelegate.swift in Sources */,
+				D3692DEC291169AF00A2F3A1 /* NetworkMonitor.swift in Sources */,
+				D3503E8F2911F68500B5E9CE /* UserDefaultsManager.swift in Sources */,
 				D3692DA4291154D200A2F3A1 /* SceneDelegate.swift in Sources */,
+				D3692DEA2911687900A2F3A1 /* Endpoints.swift in Sources */,
+				D3692DDC291157C800A2F3A1 /* LoginViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,14 +393,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		D3692DA7291154D200A2F3A1 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D3692DA8291154D200A2F3A1 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		D3692DAC291154D400A2F3A1 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -442,7 +530,6 @@
 				INFOPLIST_FILE = "SALT-MVVM_TEST/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -470,7 +557,6 @@
 				INFOPLIST_FILE = "SALT-MVVM_TEST/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
