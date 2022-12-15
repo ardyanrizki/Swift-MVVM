@@ -45,7 +45,7 @@ class LoginViewController: UIViewController {
     
     private func setupBinders() {
         viewModel.error.bind { [weak self] error in
-            if let error {
+            if let error = error {
                 DispatchQueue.main.async {
                     self?.setupLoadingState(false)
                     self?.setupErrorLabel(text: error)

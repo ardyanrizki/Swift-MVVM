@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import SwiftUI
+import PulseUI
 
 class HomeViewController: UIViewController {
     
@@ -13,6 +15,7 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var quoteLabel: UILabel!
     @IBOutlet weak var authorLabel: UILabel!
     @IBOutlet weak var quoteStackView: UIStackView!
+    @IBOutlet weak var inspectorButton: UIButton!
     
     let viewModel = HomeViewModel()
 
@@ -20,6 +23,7 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         setupBinders()
         setupNavigationBar()
+        setupInspectorButton()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -29,9 +33,14 @@ class HomeViewController: UIViewController {
         viewModel.getQuote()
     }
     
+    @IBAction func inspectorTapped() {
+        let vcPulse = UIHostingController(rootView: PulseUI.MainView())
+        navigationController?.pushViewController(vcPulse, animated: true)
+    }
+    
     func setupBinders() {
         viewModel.email.bind { [weak self] email in
-            if let email {
+            if let email = email {
                 DispatchQueue.main.async {
                     self?.emailLabel.text = email
                 }
@@ -48,7 +57,7 @@ class HomeViewController: UIViewController {
         
         viewModel.quote.bind { [weak self] quote in
             DispatchQueue.main.async {
-                guard let quote else {
+                guard let quote = quote else {
                     self?.setQuoteStackView(hidden: true)
                     return
                 }
@@ -67,6 +76,15 @@ class HomeViewController: UIViewController {
         navigationController?.navigationBar.tintColor = .black
         navigationItem.hidesBackButton = true
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Sign Out", style: .plain, target: self, action: #selector(signOutDidPressed))
+    }
+    
+    func setupInspectorButton() {
+        #if DEBUG
+        inspectorButton.isHidden = false
+        inspectorButton.layer.cornerRadius = 8
+        #else
+        inspectorButton.isHidden = true
+        #endif
     }
     
     @objc private func signOutDidPressed() {

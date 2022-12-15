@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -12,6 +15,7 @@
             <connections>
                 <outlet property="authorLabel" destination="KUj-TZ-Pn5" id="C0D-f8-ghd"/>
                 <outlet property="emailLabel" destination="dWK-gw-1vp" id="hLh-wf-AR5"/>
+                <outlet property="inspectorButton" destination="8ok-YD-HSy" id="grq-e9-00x"/>
                 <outlet property="quoteLabel" destination="r1c-Lk-yiq" id="MVi-Va-e83"/>
                 <outlet property="quoteStackView" destination="QUE-Cq-Po1" id="1gU-R8-Gz2"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -81,10 +85,23 @@
                         </label>
                     </subviews>
                 </stackView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8ok-YD-HSy">
+                    <rect key="frame" x="264.33333333333331" y="55" width="109.66666666666669" height="41.666666666666657"/>
+                    <color key="backgroundColor" name="AccentColor"/>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <inset key="contentEdgeInsets" minX="8" minY="8" maxX="8" maxY="8"/>
+                    <state key="normal" title="Network">
+                        <imageReference key="image" image="wave.3.backward.circle" catalog="system" symbolScale="large"/>
+                    </state>
+                    <connections>
+                        <action selector="inspectorTapped" destination="-1" eventType="touchUpInside" id="BEs-Sm-QEr"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
+                <constraint firstItem="8ok-YD-HSy" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="8" id="BKJ-N2-qoE"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="QUE-Cq-Po1" secondAttribute="trailing" constant="32" id="Bz7-St-4El"/>
                 <constraint firstItem="3k1-hX-PZR" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="DKi-Wu-z5C"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="3k1-hX-PZR" secondAttribute="trailing" constant="32" id="UXQ-Hd-6wf"/>
@@ -92,6 +109,7 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="QUE-Cq-Po1" secondAttribute="bottom" constant="40" id="dty-i7-xxc"/>
                 <constraint firstItem="i3m-XP-TBG" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="eGE-gl-skg"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="i3m-XP-TBG" secondAttribute="trailing" id="fhg-jn-Ghq"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="8ok-YD-HSy" secondAttribute="trailing" constant="16" id="hiY-DB-t7A"/>
                 <constraint firstItem="3k1-hX-PZR" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="32" id="hoO-G0-nGp"/>
                 <constraint firstItem="QUE-Cq-Po1" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="32" id="mva-NL-Hgd"/>
                 <constraint firstItem="3k1-hX-PZR" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="wcd-5I-U7c"/>
@@ -101,6 +119,10 @@
     </objects>
     <resources>
         <image name="bg" width="400" height="300"/>
+        <image name="wave.3.backward.circle" catalog="system" width="128" height="123"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

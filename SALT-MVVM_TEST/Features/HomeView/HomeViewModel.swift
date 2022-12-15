@@ -16,7 +16,7 @@ final class HomeViewModel {
     var quote: ObservableObject<Quote?> = ObservableObject(nil)
     
     func isUserTokenStored() -> Bool {
-        guard KeychainManager.shared.getToken() != nil else { return false}
+        guard KeychainManager.shared.getToken() != nil else { return false }
         return true
     }
     
