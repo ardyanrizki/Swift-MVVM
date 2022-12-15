@@ -3,10 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B8FE4256292E061700A141CE /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = B8FE4255292E061700A141CE /* Alamofire */; };
+		B8FE4259292E08A900A141CE /* Pulse in Frameworks */ = {isa = PBXBuildFile; productRef = B8FE4258292E08A900A141CE /* Pulse */; };
+		B8FE425B292E08A900A141CE /* PulseCore in Frameworks */ = {isa = PBXBuildFile; productRef = B8FE425A292E08A900A141CE /* PulseCore */; };
+		B8FE425D292E08A900A141CE /* PulseUI in Frameworks */ = {isa = PBXBuildFile; productRef = B8FE425C292E08A900A141CE /* PulseUI */; };
 		D3503E8C2911EA2C00B5E9CE /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3503E8B2911EA2C00B5E9CE /* KeychainManager.swift */; };
 		D3503E8F2911F68500B5E9CE /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3503E8E2911F68500B5E9CE /* UserDefaultsManager.swift */; };
 		D3503E912912312A00B5E9CE /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3503E902912312A00B5E9CE /* Constants.swift */; };
@@ -84,6 +88,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B8FE425B292E08A900A141CE /* PulseCore in Frameworks */,
+				B8FE4259292E08A900A141CE /* Pulse in Frameworks */,
+				B8FE425D292E08A900A141CE /* PulseUI in Frameworks */,
+				B8FE4256292E061700A141CE /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,6 +112,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B8FE4248292DF56E00A141CE /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				D3692DE82911686300A2F3A1 /* Networking */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		B8FE4249292DF57300A141CE /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				D3692DD22911567D00A2F3A1 /* Models */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		B8FE424A292DF57800A141CE /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				D3692DDD2911588800A2F3A1 /* HomeView */,
+				D3692DD12911567400A2F3A1 /* LoginView */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
 		D3503E8D2911F66200B5E9CE /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -138,11 +171,10 @@
 		D3692DA0291154D200A2F3A1 /* SALT-MVVM_TEST */ = {
 			isa = PBXGroup;
 			children = (
+				B8FE424A292DF57800A141CE /* Features */,
+				B8FE4249292DF57300A141CE /* Data */,
+				B8FE4248292DF56E00A141CE /* Core */,
 				D3503E8D2911F66200B5E9CE /* Utils */,
-				D3692DE82911686300A2F3A1 /* Networking */,
-				D3692DDD2911588800A2F3A1 /* HomeView */,
-				D3692DD12911567400A2F3A1 /* LoginView */,
-				D3692DD22911567D00A2F3A1 /* Models */,
 				D3692DA3291154D200A2F3A1 /* SceneDelegate.swift */,
 				D3692DA1291154D200A2F3A1 /* AppDelegate.swift */,
 				D3692DAA291154D400A2F3A1 /* Assets.xcassets */,
@@ -225,6 +257,12 @@
 			dependencies = (
 			);
 			name = "SALT-MVVM_TEST";
+			packageProductDependencies = (
+				B8FE4255292E061700A141CE /* Alamofire */,
+				B8FE4258292E08A900A141CE /* Pulse */,
+				B8FE425A292E08A900A141CE /* PulseCore */,
+				B8FE425C292E08A900A141CE /* PulseUI */,
+			);
 			productName = "SALT-MVVM_TEST";
 			productReference = D3692D9E291154D200A2F3A1 /* SALT-MVVM_TEST.app */;
 			productType = "com.apple.product-type.application";
@@ -289,7 +327,7 @@
 				};
 			};
 			buildConfigurationList = D3692D99291154D200A2F3A1 /* Build configuration list for PBXProject "SALT-MVVM_TEST" */;
-			compatibilityVersion = "Xcode 14.0";
+			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -297,6 +335,10 @@
 				Base,
 			);
 			mainGroup = D3692D95291154D200A2F3A1;
+			packageReferences = (
+				B8FE4254292E061700A141CE /* XCRemoteSwiftPackageReference "Alamofire" */,
+				B8FE4257292E08A900A141CE /* XCRemoteSwiftPackageReference "Pulse" */,
+			);
 			productRefGroup = D3692D9F291154D200A2F3A1 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -523,15 +565,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = HK83VC2R9L;
+				DEVELOPMENT_TEAM = U9A6VJ9GTW;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "SALT-MVVM_TEST/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -539,6 +583,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "dev.ardyan.SALT-MVVM-TEST";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -550,15 +595,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = HK83VC2R9L;
+				DEVELOPMENT_TEAM = U9A6VJ9GTW;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "SALT-MVVM_TEST/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -566,6 +613,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "dev.ardyan.SALT-MVVM-TEST";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -688,6 +736,48 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B8FE4254292E061700A141CE /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		B8FE4257292E08A900A141CE /* XCRemoteSwiftPackageReference "Pulse" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kean/Pulse";
+			requirement = {
+				kind = exactVersion;
+				version = 1.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B8FE4255292E061700A141CE /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B8FE4254292E061700A141CE /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		B8FE4258292E08A900A141CE /* Pulse */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B8FE4257292E08A900A141CE /* XCRemoteSwiftPackageReference "Pulse" */;
+			productName = Pulse;
+		};
+		B8FE425A292E08A900A141CE /* PulseCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B8FE4257292E08A900A141CE /* XCRemoteSwiftPackageReference "Pulse" */;
+			productName = PulseCore;
+		};
+		B8FE425C292E08A900A141CE /* PulseUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B8FE4257292E08A900A141CE /* XCRemoteSwiftPackageReference "Pulse" */;
+			productName = PulseUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D3692D96291154D200A2F3A1 /* Project object */;
 }
