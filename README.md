@@ -1,7 +1,7 @@
 # Swift-MVVM
-iOS App Project built with UIKit, MVVM design pattern, and auth API
+iOS App Project built with UIKit, MVVM design pattern, auth API, Pulse, and Alamofire.
 
-> This app developed by Ardyan. No need install any package.
+> This app developed by Ardyan.
 
 ## Installing
 -   Open `Swift-MVVM` directory on terminal
