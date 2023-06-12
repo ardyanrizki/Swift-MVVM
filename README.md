@@ -1,5 +1,5 @@
 # Swift-MVVM
-iOS App Project built with UIKit, MVVM design pattern, auth API, Pulse, and Alamofire.
+iOS App Project built with UIKit, MVVM design pattern, auth API, Alamofire for HTTP networking, Pulse for network logger, and SPM for package management.
 
 > This app developed by Ardyan.
 
